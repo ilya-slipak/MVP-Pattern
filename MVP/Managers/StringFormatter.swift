@@ -10,8 +10,8 @@ import UIKit
 class StringFormatter {
     
     static func getAttributedString(string: String,
-                                  color: UIColor,
-                                  font: UIFont) -> NSMutableAttributedString {
+                                    color: UIColor,
+                                    font: UIFont) -> NSMutableAttributedString {
         
         let attributes: [NSAttributedString.Key: Any] = [
             .font: font,

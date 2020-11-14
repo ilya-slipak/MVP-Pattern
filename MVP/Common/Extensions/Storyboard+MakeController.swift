@@ -11,6 +11,7 @@ extension UIStoryboard {
     
     static func makeController(name: String, identifier: String) -> UIViewController {
         
-        return UIStoryboard(name: name, bundle: nil).instantiateViewController(identifier: identifier)
+        return UIStoryboard(name: name, bundle: nil)
+            .instantiateViewController(identifier: identifier)
     }
 }
