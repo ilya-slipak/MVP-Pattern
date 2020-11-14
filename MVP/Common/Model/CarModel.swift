@@ -5,25 +5,27 @@
 //  Created by Ilya Slipak on 10.11.2020.
 //
 
-import Foundation
+import UIKit
 
-struct Entities<T: Decodable>: Decodable {
+struct CarModel {
     
-    let entities: [T]
+    let price: Int
+    let model: String
+    let year: String
+    let imageURL: String
+    let company: String
 }
 
-struct CarModel: Decodable {
-    
-    let carCompany: String
-    let model: String
-    let price: Int
-    let imageURL: String
+// MARK: - Decodable
+
+extension CarModel: Decodable {
     
     enum CodingKeys: String, CodingKey {
         
-        case carCompany = "manufacturer"
         case model
         case price
+        case year
         case imageURL = "img"
+        case company = "manufacturer"
     }
 }

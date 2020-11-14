@@ -11,37 +11,56 @@ final class CarListViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
+    var presenter: CarPresentable!
+    
     // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        presenter.viewDidLoad()
     }
-    
-    // MARK: - Private Methods
 }
 
-// MARK: - CarView
+// MARK: - CarViewable
 
-extension CarListViewController: CarView {
+extension CarListViewController: CarViewable {
     
-    func showLoader() {
+    func setupView() {
         
-        //TODO: Show Loader
+        title = "Car List"
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.register(UINib(nibName: "CarContentTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "CarContentTableViewCell")
     }
-    
-    func hideLoader() {
         
-        //TODO: Hide Loader
-    }
-    
     func reloadData() {
         
-        //TODO: Reload data
+        tableView.reloadData()
+    }
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
+extension CarListViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return presenter.count
     }
     
-    func showAlert(with message: String) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //TODO: Show alert
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CarContentTableViewCell",
+                                                 for: indexPath) as! CarContentTableViewCell
+        
+        let carModel = presenter.getCarModel(at: indexPath.row)
+        cell.configure(with: carModel)
+        
+        return cell
     }
 }

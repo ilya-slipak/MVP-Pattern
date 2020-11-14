@@ -11,42 +11,45 @@ final class CarListPresenter {
     
     // MARK: - Private Properties
     
-    private weak var view: CarView!
-    private let client: CarClientable = MockCarClient()
-    private var dataSource: [CarModel] = []
-    private var count: Int {
+    private var dataSource: [UICarModel] = []
+    
+    // MARK: - Public Properties
+    
+    weak var view: CarViewable!
+    var apiClient: CarClientable!
+    var count: Int {
         return dataSource.count
     }
     
+    // MARK: - Private Properties
+    
+   private func getCars() {
+        
+        apiClient.getCars { [weak self] result in
+            
+            switch result {
+            case .success(let response):
+                self?.dataSource = response.entities.map { UICarModel(carModel: $0) }
+                self?.view.reloadData()
+            case .failure(let error):
+                print("Error:", error)
+            }
+        }
+    }
 }
 
 // MARK: - CarPresenter
 
-extension CarListPresenter: CarPresenter {
+extension CarListPresenter: CarPresentable {
     
-    func getCount() -> Int {
+    func viewDidLoad() {
         
-        return count
+        view.setupView()
+        getCars()
     }
     
-    func getCarModel(at index: Int) -> CarModel {
+    func getCarModel(at index: Int) -> UICarModel {
         
         return dataSource[index]
-    }
-    
-    func getCarsFromApi() {
-        
-        view.showLoader()
-        client.getCars { [weak self] result in
-            
-            self?.view.hideLoader()
-            switch result {
-            case .success(let response):
-                self?.dataSource = response.entities
-                self?.view.reloadData()
-            case .failure(let error):
-                self?.view.showAlert(with: error.message)
-            }
-        }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MockCarClient {
+final class MockCarApiClient {
     
     // MARK: - Private Properties
     
@@ -15,22 +15,25 @@ final class MockCarClient {
     private var decoder = JSONDecoder()
 }
 
-extension MockCarClient: CarClientable {
-    
-    func getCars(completion: @escaping(Result<Entities<CarModel>, ApiError>) -> Void) {
+// MARK: - CarClientable
+
+extension MockCarApiClient: CarClientable {
         
-        guard let path = bundle.path(forResource: "cars", ofType: ".json") else {
+    func getCars(completion: @escaping(Result<Entity<CarModel>, ApiError>) -> Void) {
+        
+        guard let path = bundle.url(forResource: "cars", withExtension: ".json") else {
             completion(.failure(ApiError(message: "Invalid json path")))
             return
         }
         
-        var enities: Entities<CarModel>
+        var enities: Entity<CarModel>
         
         do {
-            let data = try Data(contentsOf: path.toUrl())
-            enities = try decoder.decode(Entities<CarModel>.self, from: data)
             
+            let data = try Data(contentsOf: path)
+            enities = try decoder.decode(Entity<CarModel>.self, from: data)
         } catch {
+            
             completion(.failure(ApiError(message: "Corrupted json file")))
             return
         }

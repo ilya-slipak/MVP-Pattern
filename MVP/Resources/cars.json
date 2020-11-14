@@ -1,35 +1,40 @@
 {
-    entities:
+    "entities":
     [
         {
-            manufacturer: "Porsche",
-            model: "911",
-            price: 135000,
-            img: "911"
+            "manufacturer": "Porsche",
+            "model": "911",
+            "price": 135000,
+            "year": "2015",
+            "img": "911"
         },
         {
-            manufacturer: "Nissan",
-            model: "GT-R",
-            price: 80000,
-            img: "GT-R"
+            "manufacturer": "Nissan",
+            "model": "GT-R",
+            "price": 120000,
+            "year": "2015",
+            "img": "GT-R"
         },
         {
-            manufacturer: "BMW",
-            model: "M3",
-            price: 60500,
-            img: "M3"
+            "manufacturer": "BMW",
+            "model": "M3",
+            "price": 70500,
+            "year": "2014",
+            "img": "M3"
         },
         {
-            manufacturer: "Audi",
-            model: "TT",
-            price: 40000,
-            img: "TT"
+            "manufacturer": "Audi",
+            "model": "TT",
+            "price": 40000,
+            "year": "2012",
+            "img": "TT"
         },
         {
-            manufacturer: "BMW",
-            model: "M2",
-            price: 60000,
-            img: "M2"
+            "manufacturer": "BMW",
+            "model": "M2",
+            "price": 65000,
+            "year": "2020",
+            "img": "M2"
         }
     ]
 }

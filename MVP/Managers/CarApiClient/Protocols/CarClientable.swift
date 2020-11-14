@@ -9,5 +9,5 @@ import Foundation
 
 protocol CarClientable: class {
     
-    func getCars(completion: @escaping(Result<Entities<CarModel>, ApiError>) -> Void)
+    func getCars(completion: @escaping(Result<Entity<CarModel>, ApiError>) -> Void)
 }

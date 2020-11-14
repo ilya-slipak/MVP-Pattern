@@ -7,10 +7,10 @@
 
 import Foundation
 
-protocol CarView: class {
+protocol CarViewable: class {
+
+    // MARK: - Methods
     
-    func showLoader()
-    func hideLoader()
+    func setupView()
     func reloadData()
-    func showAlert(with message: String)
 }
