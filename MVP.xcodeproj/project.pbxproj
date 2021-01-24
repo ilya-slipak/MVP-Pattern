@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05206537256018DC00F36744 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05206536256018DC00F36744 /* Entity.swift */; };
-		0520653F256019F000F36744 /* Storyboard+MakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520653E256019F000F36744 /* Storyboard+MakeController.swift */; };
+		0520653F256019F000F36744 /* UIViewController+MakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520653E256019F000F36744 /* UIViewController+MakeController.swift */; };
 		0520655F25601C1D00F36744 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520655E25601C1D00F36744 /* ScreenFactory.swift */; };
 		053EF5D7252881CD00EFC561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053EF5D6252881CD00EFC561 /* AppDelegate.swift */; };
 		053EF5DB252881CD00EFC561 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053EF5DA252881CD00EFC561 /* CarListViewController.swift */; };
@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		05206536256018DC00F36744 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		0520653E256019F000F36744 /* Storyboard+MakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+MakeController.swift"; sourceTree = "<group>"; };
+		0520653E256019F000F36744 /* UIViewController+MakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MakeController.swift"; sourceTree = "<group>"; };
 		0520655E25601C1D00F36744 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
 		053EF5D3252881CD00EFC561 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		053EF5D6252881CD00EFC561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		05EE9D7D255B362700BFCB33 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0520653E256019F000F36744 /* Storyboard+MakeController.swift */,
+				0520653E256019F000F36744 /* UIViewController+MakeController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0520653F256019F000F36744 /* Storyboard+MakeController.swift in Sources */,
+				0520653F256019F000F36744 /* UIViewController+MakeController.swift in Sources */,
 				053EF5DB252881CD00EFC561 /* CarListViewController.swift in Sources */,
 				05EE9D8C255B391D00BFCB33 /* CarPresentable.swift in Sources */,
 				056D3FA625605F9200E6EC47 /* UICarModel.swift in Sources */,
