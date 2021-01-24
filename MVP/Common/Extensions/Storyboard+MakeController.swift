@@ -7,11 +7,17 @@
 
 import UIKit
 
-extension UIStoryboard {
+extension UIViewController {
     
-    static func makeController(name: String, identifier: String) -> UIViewController {
+    static func instantiateFromStoryboard(_ name: String = "Main") -> Self
+    {
+        return instantiateFromStoryboardHelper(name)
+    }
+    
+    fileprivate class func instantiateFromStoryboardHelper<T>(_ name: String) -> T {
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! T
         
-        return UIStoryboard(name: name, bundle: nil)
-            .instantiateViewController(identifier: identifier)
+        return controller
     }
 }

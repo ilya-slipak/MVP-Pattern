@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05206537256018DC00F36744 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05206536256018DC00F36744 /* Entity.swift */; };
 		0520653F256019F000F36744 /* Storyboard+MakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520653E256019F000F36744 /* Storyboard+MakeController.swift */; };
-		0520655F25601C1D00F36744 /* CarScreensFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520655E25601C1D00F36744 /* CarScreensFactory.swift */; };
+		0520655F25601C1D00F36744 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520655E25601C1D00F36744 /* ScreenFactory.swift */; };
 		053EF5D7252881CD00EFC561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053EF5D6252881CD00EFC561 /* AppDelegate.swift */; };
 		053EF5DB252881CD00EFC561 /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053EF5DA252881CD00EFC561 /* CarListViewController.swift */; };
 		053EF5DE252881CD00EFC561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053EF5DC252881CD00EFC561 /* Main.storyboard */; };
@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		05206536256018DC00F36744 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		0520653E256019F000F36744 /* Storyboard+MakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+MakeController.swift"; sourceTree = "<group>"; };
-		0520655E25601C1D00F36744 /* CarScreensFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarScreensFactory.swift; sourceTree = "<group>"; };
+		0520655E25601C1D00F36744 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
 		053EF5D3252881CD00EFC561 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		053EF5D6252881CD00EFC561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		053EF5DA252881CD00EFC561 /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		0520655D25601BFF00F36744 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				0520655E25601C1D00F36744 /* CarScreensFactory.swift */,
+				0520655E25601C1D00F36744 /* ScreenFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -330,7 +330,7 @@
 				05632B0A255B33C800D918DD /* MockCarApiClient.swift in Sources */,
 				0569CBFD255B31A9001F9419 /* CarModel.swift in Sources */,
 				056F190B25603B77003327B2 /* CarContentTableViewCell.swift in Sources */,
-				0520655F25601C1D00F36744 /* CarScreensFactory.swift in Sources */,
+				0520655F25601C1D00F36744 /* ScreenFactory.swift in Sources */,
 				0569CBF7255B311E001F9419 /* CarListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

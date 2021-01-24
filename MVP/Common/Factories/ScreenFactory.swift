@@ -7,13 +7,11 @@
 
 import UIKit
 
-enum CarScreensFactory {
+enum ScreenFactory {
     
     static func makeCarListScreen() -> CarListViewController {
         
-        let controller = UIStoryboard.makeController(name: "Main",
-                                                     identifier: "CarListViewController") as! CarListViewController
-        
+        let controller = CarListViewController.instantiateFromStoryboard()
         let presenter = CarListPresenter()
         let apiClient = MockCarApiClient()
         

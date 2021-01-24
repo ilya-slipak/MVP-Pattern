@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barStyle = .black
         
-        let carListViewController = CarScreensFactory.makeCarListScreen()
+        let carListViewController = ScreenFactory.makeCarListScreen()
         let navigatioController = UINavigationController(rootViewController: carListViewController)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigatioController
