@@ -12,13 +12,8 @@ enum ScreenFactory {
     static func makeCarListScreen() -> CarListViewController {
         
         let controller = CarListViewController.instantiateFromStoryboard()
-        let presenter = CarListPresenter()
-        let apiClient = MockCarApiClient()
-        
-        controller.presenter = presenter
-        presenter.view = controller
-        presenter.apiClient = apiClient
-        
+        let builder = CarListBuilder()
+        builder.build(controller: controller)
         return controller
     }
 }

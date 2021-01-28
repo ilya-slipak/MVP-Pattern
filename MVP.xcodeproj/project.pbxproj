@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05065AAD25C2C2B200BC3D3E /* CarListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065AAC25C2C2B200BC3D3E /* CarListBuilder.swift */; };
+		05065AB025C2C2D500BC3D3E /* CarBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05065AAF25C2C2D500BC3D3E /* CarBuildable.swift */; };
 		05206537256018DC00F36744 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05206536256018DC00F36744 /* Entity.swift */; };
 		0520653F256019F000F36744 /* UIViewController+MakeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520653E256019F000F36744 /* UIViewController+MakeController.swift */; };
 		0520655F25601C1D00F36744 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0520655E25601C1D00F36744 /* ScreenFactory.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05065AAC25C2C2B200BC3D3E /* CarListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListBuilder.swift; sourceTree = "<group>"; };
+		05065AAF25C2C2D500BC3D3E /* CarBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBuildable.swift; sourceTree = "<group>"; };
 		05206536256018DC00F36744 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		0520653E256019F000F36744 /* UIViewController+MakeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+MakeController.swift"; sourceTree = "<group>"; };
 		0520655E25601C1D00F36744 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -65,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05065AAB25C2C2A100BC3D3E /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				05065AAC25C2C2B200BC3D3E /* CarListBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
 		0514287D256039F300E93B2F /* CarApiClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +206,7 @@
 		0569CBF5255B310B001F9419 /* CarList */ = {
 			isa = PBXGroup;
 			children = (
+				05065AAB25C2C2A100BC3D3E /* Builder */,
 				05EE9D86255B390800BFCB33 /* Protocols */,
 				056D3FA425605F8000E6EC47 /* UIModel */,
 				056F190425603B34003327B2 /* View */,
@@ -241,6 +254,7 @@
 			children = (
 				05EE9D87255B391500BFCB33 /* CarViewable.swift */,
 				05EE9D8B255B391D00BFCB33 /* CarPresentable.swift */,
+				05065AAF25C2C2D500BC3D3E /* CarBuildable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -325,6 +339,8 @@
 				056F191125604572003327B2 /* StringFormatter.swift in Sources */,
 				053EF5D7252881CD00EFC561 /* AppDelegate.swift in Sources */,
 				05EE9D8F255B393400BFCB33 /* CarClientable.swift in Sources */,
+				05065AB025C2C2D500BC3D3E /* CarBuildable.swift in Sources */,
+				05065AAD25C2C2B200BC3D3E /* CarListBuilder.swift in Sources */,
 				05EE9D88255B391500BFCB33 /* CarViewable.swift in Sources */,
 				056F191825605E1D003327B2 /* ApiError.swift in Sources */,
 				05632B0A255B33C800D918DD /* MockCarApiClient.swift in Sources */,
