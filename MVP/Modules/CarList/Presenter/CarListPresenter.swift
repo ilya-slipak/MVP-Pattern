@@ -15,32 +15,38 @@ final class CarListPresenter {
     
     // MARK: - Public Properties
     
-    weak var view: CarViewable!
-    var apiClient: CarClientable!
-    var count: Int {
-        return dataSource.count
-    }
+    weak var view: (CarViewProtocol & AlertShowable)!
+    var carAPIClient: CarClientable!
     
     // MARK: - Private Properties
     
    private func getCars() {
         
-        apiClient.getCars { [weak self] result in
+        carAPIClient.getCars { [weak self] result in
             
             switch result {
             case .success(let response):
                 self?.dataSource = response.entities.map { UICarModel(carModel: $0) }
                 self?.view.reloadData()
             case .failure(let error):
+                
                 print("Error:", error)
             }
         }
     }
 }
 
-// MARK: - CarPresenter
+// MARK: - CarListPresenterProtocol
 
-extension CarListPresenter: CarPresentable {
+extension CarListPresenter: CarListPresenterProtocol {
+    
+    // MARK: - Properties
+    
+    var count: Int {
+        return dataSource.count
+    }
+    
+    // MARK: - Methods
     
     func viewDidLoad() {
         

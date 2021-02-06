@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CarViewable: class {
+protocol CarViewProtocol: class {
 
     // MARK: - Methods
     

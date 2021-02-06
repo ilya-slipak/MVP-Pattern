@@ -14,6 +14,7 @@ enum ScreenFactory {
         let controller = CarListViewController.instantiateFromStoryboard()
         let builder = CarListBuilder()
         builder.build(controller: controller)
+        
         return controller
     }
 }

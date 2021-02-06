@@ -11,7 +11,9 @@ struct CarListBuilder {
     
 }
 
-extension CarListBuilder: CarBuildable {
+// MARK: - CarBuilderProtocol
+
+extension CarListBuilder: CarBuilderProtocol {
     
     func build(controller: CarListViewController) {
         
@@ -20,6 +22,6 @@ extension CarListBuilder: CarBuildable {
         
         controller.presenter = presenter
         presenter.view = controller
-        presenter.apiClient = apiClient
+        presenter.carAPIClient = apiClient
     }
 }

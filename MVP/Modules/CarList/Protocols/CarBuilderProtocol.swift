@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CarBuildable {
+protocol CarBuilderProtocol {
     
     func build(controller: CarListViewController)
 }

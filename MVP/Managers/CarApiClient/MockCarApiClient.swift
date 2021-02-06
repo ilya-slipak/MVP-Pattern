@@ -26,18 +26,15 @@ extension MockCarApiClient: CarClientable {
             return
         }
         
-        var enities: Entity<CarModel>
-        
         do {
             
             let data = try Data(contentsOf: path)
-            enities = try decoder.decode(Entity<CarModel>.self, from: data)
+            let enities = try decoder.decode(Entity<CarModel>.self, from: data)
+            
+            return completion(.success(enities))
         } catch {
             
             completion(.failure(ApiError(message: "Corrupted json file")))
-            return
         }
-        
-        return completion(.success(enities))
     }
 }

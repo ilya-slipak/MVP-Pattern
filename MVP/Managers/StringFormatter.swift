@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StringFormatter {
+struct StringFormatter {
     
     static func getAttributedString(string: String,
                                     color: UIColor,

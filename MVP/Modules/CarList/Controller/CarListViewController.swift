@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class CarListViewController: UIViewController {
+final class CarListViewController: UIViewController, AlertShowable {
     
-    // MARK: - Outlets
+    // MARK: - IBOutlet Properties
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
     
-    var presenter: CarPresentable!
+    var presenter: CarListPresenterProtocol!
     
     // MARK: - Lifecycle Methods
 
@@ -26,9 +26,9 @@ final class CarListViewController: UIViewController {
     }
 }
 
-// MARK: - CarViewable
+// MARK: - CarViewProtocol
 
-extension CarListViewController: CarViewable {
+extension CarListViewController: CarViewProtocol {
     
     func setupView() {
         

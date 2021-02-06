@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CarPresentable: class {
+protocol CarListPresenterProtocol: class {
     
     // MARK: - Properties
     
