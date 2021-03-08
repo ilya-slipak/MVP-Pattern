@@ -17,7 +17,7 @@
 		053EF5DE252881CD00EFC561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053EF5DC252881CD00EFC561 /* Main.storyboard */; };
 		053EF5E0252881D000EFC561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 053EF5DF252881D000EFC561 /* Assets.xcassets */; };
 		053EF5E3252881D000EFC561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 053EF5E1252881D000EFC561 /* LaunchScreen.storyboard */; };
-		054D9B8A25CF2BAB0015C25A /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D9B8925CF2BAB0015C25A /* AlertShowable.swift */; };
+		054D9B8A25CF2BAB0015C25A /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D9B8925CF2BAB0015C25A /* AlertPresentable.swift */; };
 		05632B0A255B33C800D918DD /* MockCarApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05632B09255B33C800D918DD /* MockCarApiClient.swift */; };
 		0569CBF3255B2E65001F9419 /* cars.json in Resources */ = {isa = PBXBuildFile; fileRef = 0569CBF2255B2E65001F9419 /* cars.json */; };
 		0569CBF7255B311E001F9419 /* CarListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0569CBF6255B311E001F9419 /* CarListPresenter.swift */; };
@@ -45,7 +45,7 @@
 		053EF5DF252881D000EFC561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		053EF5E2252881D000EFC561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		053EF5E4252881D000EFC561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		054D9B8925CF2BAB0015C25A /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
+		054D9B8925CF2BAB0015C25A /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		05632B09255B33C800D918DD /* MockCarApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCarApiClient.swift; sourceTree = "<group>"; };
 		0569CBF2255B2E65001F9419 /* cars.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cars.json; sourceTree = "<group>"; };
 		0569CBF6255B311E001F9419 /* CarListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListPresenter.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		054D9B8825CF2B370015C25A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				054D9B8925CF2BAB0015C25A /* AlertShowable.swift */,
+				054D9B8925CF2BAB0015C25A /* AlertPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0520653F256019F000F36744 /* UIViewController+instantiateFromStoryboard.swift in Sources */,
-				054D9B8A25CF2BAB0015C25A /* AlertShowable.swift in Sources */,
+				054D9B8A25CF2BAB0015C25A /* AlertPresentable.swift in Sources */,
 				053EF5DB252881CD00EFC561 /* CarListViewController.swift in Sources */,
 				05EE9D8C255B391D00BFCB33 /* CarListPresenterProtocol.swift in Sources */,
 				056D3FA625605F9200E6EC47 /* UICarModel.swift in Sources */,

@@ -27,12 +27,12 @@ struct UICarModel {
         
         let finalAttribtedString = StringFormatter
             .getAttributedString(string: pricePlaceholder,
-                               color: placeholderColor,
-                               font: font)
+                                 color: placeholderColor,
+                                 font: font)
         let priceValueAttributedString = StringFormatter
             .getAttributedString(string: priceValue,
-                               color: priceValueColor,
-                               font: font)
+                                 color: priceValueColor,
+                                 font: font)
         
         finalAttribtedString.append(priceValueAttributedString)
         

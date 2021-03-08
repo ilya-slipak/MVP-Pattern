@@ -15,7 +15,7 @@ final class CarListPresenter {
     
     // MARK: - Public Properties
     
-    weak var view: (CarViewProtocol & AlertShowable)!
+    weak var view: (CarViewProtocol & AlertPresentable)!
     var carAPIClient: CarClientable!
     
     // MARK: - Private Properties

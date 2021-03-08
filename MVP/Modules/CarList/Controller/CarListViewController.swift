@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CarListViewController: UIViewController, AlertShowable {
+final class CarListViewController: UIViewController, AlertPresentable {
     
     // MARK: - IBOutlet Properties
     
